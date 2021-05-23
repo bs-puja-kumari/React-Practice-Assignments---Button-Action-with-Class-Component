@@ -12,7 +12,7 @@ class App extends Component {
     render() {
     	return(
     		<div id="main">
-		<button id="click" onclick={()=>{<p id="para">{this.state.data}</p>}}> on click</button>
+		<button id="click" onclick={()=>{<p id="para">{this.state.data}</p>}}>click</button>
                 
 
 				{ /* Do not remove this main div!! */ }
