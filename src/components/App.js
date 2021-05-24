@@ -5,14 +5,30 @@ class App extends Component {
 	
     constructor(props) {
 		super(props);
-	this.data="Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+	     this.state = { isClicked: false };
+
+  }
+      this.printPara = () => {
+
+    this.setState({ isClicked: true });
 	};
 	    
  
     render() {
     	return(
     		<div id="main">
-		<button id="click" onclick={()=><p id="para">{this.data}</p>}>click</button>
+		<button id="click" onclick={this.printPara}>click</button>
+ {this.state.isClicked ? (
+
+          <para>
+
+            Hello, I've learnt to use the full-stack evaluation tool. This makes
+
+            me so happy
+
+          </para>
+
+        ) : null}
                 
 
 				{ /* Do not remove this main div!! */ }
