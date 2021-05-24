@@ -7,12 +7,12 @@ class App extends Component {
 		super(props);
 	     this.state = { isClicked: false };
              
-    this.printPara = this.printPara.bind(this);
-  }
-      printPara = () => {
+    //this.printPara = this.printPara.bind(this);
+  };
+      printPara = ()=>{
 
     this.setState({ isClicked: true });
-	};
+	}
 	    
  
     render() {
