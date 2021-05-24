@@ -5,43 +5,22 @@ class App extends Component {
 	
     constructor(props) {
 		super(props);
-	    this.state = {isClicked: false};
-
-this.printPara = this.printPara.bind(this);
-
-};
-
- 
-
-printPara () {
-
-this.setState({isClicked: true})
-
+	    this.state={
+            isShow:false
+        }
+        this.fn=this.fn.bind(this);
+    };
+    fn (){
+        this.setState({isShow:true})
+    }
+    render() {
+        return(
+            <div id="main">
+            <button id='click' onClick={this.fn}>Click me</button>
+            {this.state.isShow &&<p id='para'>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
+                { /* Do not remove this main div!! */ }
+            </div>
+        );
+    }
 }
-
- 
-
-render() {
-
-return(
-
-<div id="main">
-
-<button id="click" onClick={this.printPara}>Click Me</button>
-
-{this.state.isClicked &&<p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
-
-</div>
-
-);
-
-}
-
-}
-
-
- 
-
 export default App;
-
-
