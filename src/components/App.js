@@ -29,7 +29,7 @@ return(
 
 <button id="click" onClick={this.printPara}>Click Me</button>
 
-{this.state.isClicked ? <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>: null}
+{this.state.isClicked &&<p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
 
 </div>
 
