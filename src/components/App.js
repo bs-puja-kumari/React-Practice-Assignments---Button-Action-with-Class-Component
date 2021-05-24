@@ -5,28 +5,43 @@ class App extends Component {
 	
     constructor(props) {
 		super(props);
-	     this.state = { isClicked: false };
-             
-    //this.printPara = this.printPara.bind(this);
-  };
-      printPara = ()=>{
+	    this.state = {isClicked: false};
 
-    this.setState({ isClicked: true });
-	}
-	    
+this.printPara = this.printPara.bind(this);
+
+};
+
  
-    render() {
-    	return(
-    		<div id="main">
-		<button id="click" onclick={this.printPara}>click</button>
- {this.state.isClicked ? <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
 
-    ) : null}
-             </div>
-    	);
-    }
+printPara () {
+
+this.setState({isClicked: true})
+
+}
+
+ 
+
+render() {
+
+return(
+
+<div id="main">
+
+<button id="click" onClick={this.printPara}>Click Me</button>
+
+{this.state.isClicked ? <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>: null}
+
+</div>
+
+);
+
+}
+
 }
 
 
+ 
+
 export default App;
+
 
